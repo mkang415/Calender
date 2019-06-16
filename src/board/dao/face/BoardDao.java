@@ -50,12 +50,7 @@ public interface BoardDao {
 	public List selectBoardByScheNo(Paging paging, int sno);
 
 	public int getSelectbyScheNo(int sno);
-<<<<<<< HEAD
-	
-	//iconlist
-	public List iconList();
-=======
 
 	public List getSchedule();
->>>>>>> master
+
 }

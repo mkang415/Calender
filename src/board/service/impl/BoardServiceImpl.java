@@ -306,17 +306,12 @@ public class BoardServiceImpl implements BoardService {
 		return paging;
 	}
 
-<<<<<<< HEAD
-	//iconlist
-	@Override
-	public List iconList() {
-		return scheduleDao.iconList();
-=======
+
 	@Override
 	public List getSchedule() {
 		
 		return boardDao.getSchedule();
->>>>>>> master
+
 	}
 
 

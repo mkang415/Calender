@@ -867,30 +867,6 @@ public class BoardDaoImpl implements BoardDao {
 		return totalCount;
 	}
 
-<<<<<<< HEAD
-	
-	//iconlist
-	@Override
-	public List<Icon> iconList() {
-		List<Icon> iconList = new ArrayList();
-		
-		String sql = "";
-		sql += "SELECT iconno, iconname, storename";
-		sql += " FROM icon ORDER BY iconno";
-		
-		try {
-			ps=conn.prepareStatement(sql);
-			
-			rs = ps.executeQuery();
-			
-			while (rs.next()) {
-				Icon icon = new Icon();
-				icon.setIconno(rs.getInt("iconno"));
-				icon.setIconname(rs.getString("iconname"));
-				icon.setStorename(rs.getString("storename"));
-				
-				iconList.add(icon);
-=======
 	@Override
 	public List getSchedule() {
 		
@@ -912,45 +888,16 @@ public class BoardDaoImpl implements BoardDao {
 				schedule.setGamedate(rs.getDate("gamedate"));
 				
 				list.add(schedule);
->>>>>>> master
 			}
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-<<<<<<< HEAD
-			
-				
-				try {
-					if(rs!=null) rs.close();
-					if(ps!=null) ps.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-			
-		}
-		return iconList;
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 			try {
-				if(rs!=null)	rs.close();
-				if(ps!=null) 	ps.close();
+				if (rs != null)
+					rs.close();
+				if (ps != null)
+					ps.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -958,4 +905,3 @@ public class BoardDaoImpl implements BoardDao {
 		return list;
 	}
 }
->>>>>>> master
