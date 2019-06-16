@@ -116,14 +116,7 @@ table, th{
 
 </style>
 
-<!-- icon -->
-<% List<Icon> iconList = (List)request.getAttribute("iconList"); %>
 
-<!-- icon 사용을 위해 hashmap 사용. 키는 아이콘이름=팀이름. 값은 아이콘 파일명 -->
-<% Map<String, String> icon = new HashMap<>(); %>
-<%  for(int i=0; i<iconList.size(); i++) {
-	icon.put(iconList.get(i).getIconname(), iconList.get(i).getStorename());
-}%>
 
 
 
@@ -312,13 +305,12 @@ table, th{
  	
  	
  	<!-- 응원하는 팀 icon -->
- 	<td>${i.team }</td>
-<!--  	<td>홈팀 이름으로 아이콘 주소 값 가져와서 이미지 불러옴 -->
-<%-- 		<img src="/logo/<%= icon.get(${i.team})%>" --%>
-<!-- 		style="width: 21px; height: 21px;"/> -->
-<%-- 		<%= (team) %> --%>
-<!-- 		<br> -->
-<!--  	</td> -->
+ 	<td>
+		<img src="/logo/${icon.get(i.team) }"
+		style="width: 21px; height: 21px;"/>
+		${i.team }
+		<br>
+ 	</td>
  	
  	
  	

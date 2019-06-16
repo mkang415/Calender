@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import board.service.face.BoardService;
 import board.service.impl.BoardServiceImpl;
+import dto.Icon;
 import schedule.service.face.ScheduleService;
 import schedule.service.impl.ScheduleServiceImpl;
 import util.Paging;
@@ -105,10 +106,14 @@ public class BoardListController extends HttpServlet {
 		}
 		
 		//아이콘 DB값 iconList에 저장
-		List iconList = scheduleService.iconList();
-		
+		List<Icon> iconList = scheduleService.iconList();
+		 Map<String, String> icon = new HashMap<>(); 
+		  for(int i=0; i<iconList.size(); i++) {
+			icon.put(iconList.get(i).getIconname(), iconList.get(i).getStorename());
+		}
+
 		//값전달
-		req.setAttribute("iconList", iconList);
+		req.setAttribute("icon", icon);
 		
 		// view 지정
 		req.getRequestDispatcher("/WEB-INF/views/board/list.jsp").forward(req, resp);
