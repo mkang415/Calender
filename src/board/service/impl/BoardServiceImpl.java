@@ -18,6 +18,8 @@ import dto.Reply;
 import dto.Schedule;
 import reply.dao.face.ReplyDao;
 import reply.dao.impl.ReplyDaoImpl;
+import schedule.dao.face.ScheduleDao;
+import schedule.dao.impl.ScheduleDaoImpl;
 import util.Paging;
 
 public class BoardServiceImpl implements BoardService {
@@ -27,6 +29,9 @@ public class BoardServiceImpl implements BoardService {
 
 	// BoardDao객체
 	private BoardDao boardDao = new BoardDaoImpl();
+	
+	//scheduleDao 객체
+	private ScheduleDao scheduleDao = new ScheduleDaoImpl();
 	
 
 	@Override //list 전체검색
@@ -301,10 +306,17 @@ public class BoardServiceImpl implements BoardService {
 		return paging;
 	}
 
+<<<<<<< HEAD
+	//iconlist
+	@Override
+	public List iconList() {
+		return scheduleDao.iconList();
+=======
 	@Override
 	public List getSchedule() {
 		
 		return boardDao.getSchedule();
+>>>>>>> master
 	}
 
 

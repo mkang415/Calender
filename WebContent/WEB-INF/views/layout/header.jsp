@@ -52,7 +52,6 @@
 	display: inline;
 	width: 80px;
 	hight: 20px;
-/*  	background-image:url('/logo/semi_default.png');  */ 
 	background-position: 80px -78px;
 	
 }
@@ -83,7 +82,6 @@
   position:absolute; 
   top:65px;
   left: 1050px;
-/*   right: 320px; */
   width:150px; 
   height:53px; 
   background: #dcdcdc;
@@ -234,8 +232,15 @@ $(document).ready(function(){
 	
 	    <!-- 로그인상태 -->
     <c:if test="${login }">
+<<<<<<< HEAD
+	
+	
+	
+	<!-- 회원아이콘 -->
+=======
 
 
+>>>>>>> master
 	<span style="float:right; padding: 20px 10px;" class="more">
 	<span class="blind">
 	<img src="/logo/semi_default.png" width="60px" height="50px">
