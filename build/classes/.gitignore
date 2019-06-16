@@ -1,4 +1,6 @@
 /board/
+<<<<<<< HEAD
+=======
 /dto/
 /manage/
 /reply/
@@ -9,3 +11,4 @@
 /member/
 /report/
 /util/
+>>>>>>> master
