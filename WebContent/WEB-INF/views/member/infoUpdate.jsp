@@ -12,7 +12,7 @@ var nicknameConfirm; // 닉네임 중복여부
 
 function nickChk() { // 닉네임 일치 여부 검사 스크립트
 	var nickname = $("#nickname").val();
-	alert(nickname);
+// 	alert(nickname);
 
 	$.ajax({
 		type:"post"
@@ -73,6 +73,12 @@ function update() {
 .title { /* 회원탈퇴 가운데 정렬 */
  	text-align: center;
  	width: 1200px;
+}
+
+td {
+	border: 1px solid bottom;
+	padding: 0.5em;
+
 }
 
 </style>

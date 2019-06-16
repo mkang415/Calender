@@ -867,6 +867,7 @@ public class BoardDaoImpl implements BoardDao {
 		return totalCount;
 	}
 
+<<<<<<< HEAD
 	
 	//iconlist
 	@Override
@@ -889,10 +890,34 @@ public class BoardDaoImpl implements BoardDao {
 				icon.setStorename(rs.getString("storename"));
 				
 				iconList.add(icon);
+=======
+	@Override
+	public List getSchedule() {
+		
+		String sql = "";
+		sql += "SELECT scheduleno, hometeam, awayteam, gamedate";
+		sql += " FROM schedule order by scheduleno";
+		
+		List list = new ArrayList();
+		
+		try {
+			ps = conn.prepareStatement(sql);
+			rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				Schedule schedule = new Schedule();
+				schedule.setScheduleno(rs.getInt("scheduleno"));
+				schedule.setHometeam(rs.getString("hometeam"));
+				schedule.setAwayteam(rs.getString("awayteam"));
+				schedule.setGamedate(rs.getDate("gamedate"));
+				
+				list.add(schedule);
+>>>>>>> master
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
+<<<<<<< HEAD
 			
 				
 				try {
@@ -922,3 +947,15 @@ public class BoardDaoImpl implements BoardDao {
 
 
 
+=======
+			try {
+				if(rs!=null)	rs.close();
+				if(ps!=null) 	ps.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return list;
+	}
+}
+>>>>>>> master

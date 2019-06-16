@@ -1,3 +1,8 @@
+<%@page import="java.util.Map"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.Date"%>
+<%@page import="dto.Schedule"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -247,6 +252,7 @@ table, th{
 </form>
 </div>
 
+<<<<<<< HEAD
 <br>
 	<div style="text-align:center">
 	
@@ -256,10 +262,9 @@ table, th{
 
  
 
+=======
+>>>>>>> master
 </div>
-
-
-
 
 <div class="center" style="width:1200px; height: 660px;">
 
@@ -267,14 +272,23 @@ table, th{
 <div class="maching"><h1>직관 매칭 게시판</h1></div>
 <hr>
 
+
+
 <table border="1" style="margin-left: auto;
 	margin-right: auto;" style="table-layout:fixed;">
 <thead>
 	<tr>
 		<th style="width: 5%;">번호</th>
+<<<<<<< HEAD
 		<th style="width: 20%;">닉네임</th>
 		<th style="width: 40%;">제목</th>
 		<th style="width: 5%;">스케줄</th>
+=======
+		<th style="width: 15%;">닉네임</th>
+		<th style="width: 35%;">제목</th>
+<!-- 		<th style="width: 35%;">내용</th> -->
+		<th style="width: 15%;">직관날짜</th>
+>>>>>>> master
 		<th style="width: 10%;">응원하는팀</th>
 		<th style="width: 15%;">작성일</th>
 		<th style="width: 5%;">조회수</th>
@@ -282,17 +296,16 @@ table, th{
 </thead>
 
 
+
 <c:forEach items="${list}" var="i">
  <tr>
  
  	<td>${i.boardno }</td>
- 	<td>${i.nickname }
- 	<span style="float:right;" class="more2">
+ 	<td>
 	<span class="blind">
-	<img src="/logo/semi_default.png" width="30px" height="20px">
+	<img src="/logo/semi_default.png" width="20px" height="20px">
 	</span>
-	</span>
-	
+	${i.nickname }
 	<div class="listnick">
   	<ul class="list">
   	<li> 프로필 </li>
@@ -300,6 +313,7 @@ table, th{
 	</div>
  	</td>
  	<td><a href="/board/view?boardno=${i.boardno}">${i.title }</a></td>
+<<<<<<< HEAD
  	<td>${i.scheduleno }</td>
  	
  	
@@ -314,6 +328,11 @@ table, th{
  	
  	
  	
+=======
+<%--  	<td style="text-overflow:ellipsis; overflow:hidden">${i.content }</td> --%>
+ 	<td>${getScheDate.get(i.scheduleno) }</td>
+ 	<td>${i.team }</td>
+>>>>>>> master
  	<td><fmt:formatDate value="${i.insertdate }" pattern="yyyy-MM-dd"/></td>
  	<td>${i.hit }</td>
  </tr>

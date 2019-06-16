@@ -218,34 +218,8 @@ function join() {
 
 <div><p id="reject"></p></div>
 
-<button type="button" id="joinConfirm" onClick="join()">가입하기</button> <button type="button">돌아가기</button>
+<button type="button" id="joinConfirm" onClick="join()">가입하기</button> <button type="button" onClick="history.go(-1)">돌아가기</button>
 
-<!-- email : <input type="text" id="email" name="email" placeholder="이메일 입력"/> <button type="button" id="verifycode">전송하기</button><br> -->
-
-<!-- 인증번호 : <input type="text" id="emailcheck" name="emailcheck" placeholder="인증번호 입력"/> <button type="button" id="confirm">확인하기</button><br> -->
-
-<!-- 비밀번호 : <input type="password" id="pw" name="password" placeholder="비밀번호 입력" onChange="isSame()"/><br> -->
-
-<!-- 비밀번호 확인 : <input type="password" id="pwCheck" name="pwCheck" placeholder="비밀번호 확인" onChange="isSame()" />&nbsp;&nbsp;<span id="same"></span> <br> -->
-<!-- <p id="sameNickname"></p> -->
-<!-- 닉네임 : <input type="text" id="nickname" name="nickname" placeholder="닉네임 입력"/> <button type="button" id="nicknameCheck" name="nicknameCheck" onClick="nickChk()">중복검사</button><br> -->
-
-<!-- 연령대 :  -->
-<!-- <select name="age"> -->
-<!-- 		<option value="10">10대</option> -->
-<!-- 		<option value="20">20대</option> -->
-<!-- 		<option value="30">30대</option> -->
-<!-- 		<option value="40">40대</option> -->
-<!-- 		<option value="50">50대</option> -->
-<!-- 		<option value="60">60대</option> -->
-<!-- </select><br> -->
-
-<!-- 성별 : <input type="radio" name="gender" value="남성">남  -->
-<!-- 	<input type="radio" name="gender" value="여성">여<br> -->
-
-<!-- <div><p id="reject"></p></div> -->
-
-<!-- <button type="button" id="joinConfirm" onClick="join()">가입하기</button> <button type="button">돌아가기</button> -->
 
 </form>
 </div>

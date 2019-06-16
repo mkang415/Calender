@@ -50,9 +50,9 @@ table, th {
 
 <div class="wrapper">
 
-<div align="right">
-<button type="button">게시글</button> <button type="button">댓글 단 게시글</button>
-</div>
+<!-- <div align="right"> -->
+<!-- <button type="button">게시글</button> <button type="button">댓글 단 게시글</button> -->
+<!-- </div> -->
 <br>
 
 <table border="1" style="margin-left: auto;

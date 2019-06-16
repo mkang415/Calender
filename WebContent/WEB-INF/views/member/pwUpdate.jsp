@@ -49,6 +49,10 @@ $(document).ready(function(){
  	width: 1200px;
 }
 
+td {
+	padding: 0.5em;
+}
+
 </style>
 
 
