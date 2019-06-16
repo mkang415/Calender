@@ -141,8 +141,10 @@ table, tr{
 }
 
 #vbtn {
- 	position: absolute; 
-	text-align: center
+  	position:absolute;  
+  	top: 800px;
+	text-align: center;
+	left: 450px;
 }
 
 
@@ -207,7 +209,6 @@ table, tr{
   position:absolute; 
   top:130px;
   left: 780px;
-/*   right: 320px; */
   width:150px; 
   height:80px; 
   background: #dcdcdc;

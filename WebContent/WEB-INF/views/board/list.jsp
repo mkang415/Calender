@@ -274,7 +274,6 @@ table, th{
 		<th style="width: 5%;">번호</th>
 		<th style="width: 20%;">닉네임</th>
 		<th style="width: 40%;">제목</th>
-<!-- 		<th style="width: 35%;">내용</th> -->
 		<th style="width: 5%;">스케줄</th>
 		<th style="width: 10%;">응원하는팀</th>
 		<th style="width: 15%;">작성일</th>

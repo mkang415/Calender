@@ -50,7 +50,6 @@
 	display: inline;
 	width: 80px;
 	hight: 20px;
-/*  	background-image:url('/logo/semi_default.png');  */ 
 	background-position: 80px -78px;
 	
 }
@@ -81,7 +80,6 @@
   position:absolute; 
   top:65px;
   left: 1050px;
-/*   right: 320px; */
   width:150px; 
   height:80px; 
   background: #dcdcdc;
@@ -186,7 +184,7 @@ $(document).ready(function(){
 	
 	
 	
-	
+	<!-- 회원아이콘 -->
 	<span style="float:right; padding: 20px 10px;" class="more">
 	<span class="blind">
 	<img src="/logo/semi_default.png" width="60px" height="50px">
