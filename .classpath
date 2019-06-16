@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+
 	<classpathentry excluding="src/|WebContent/" kind="src" path=""/>
 	<classpathentry kind="src" path="WebContent"/>
 	<classpathentry kind="src" path="src"/>
