@@ -54,7 +54,7 @@ $(document).ready(function() {
 				$("<input>").attr({
 					type:"hidden",
 					name:"nickname",
-					value:"${nickname}"
+					value:"${sessionScope.nickname}"
 				})
 		
 		).append(
@@ -318,7 +318,8 @@ table, tr{
 
 
 <tr>
-<td class="success" style="text-align: center">제목</td><td colspan="7">${viewBoard.title }</td>
+<td class="success" style="text-align: center">제목</td><td colspan="5">${viewBoard.title }</td>
+<td class="success"	style="text-align: center">경기하는팀</td><td colspan="2">여기에경기팀</td>
 </tr>
 
 <tr><td class="success" style="text-align: center" colspan="8" >본문</td></tr>

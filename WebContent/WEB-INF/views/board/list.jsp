@@ -4,6 +4,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
+<%@page import="dto.Icon"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.Map"%>
+<%@page import="java.util.List"%>
+<%@page import="dto.Schedule"%>
+
 <c:import url="/WEB-INF/views/layout/header.jsp" />
 
 <script type="text/javascript">
@@ -109,10 +116,15 @@ table, th{
 
 </style>
 
-<!-- <script>
+<!-- icon -->
+<% List<Icon> iconList = (List)request.getAttribute("iconList"); %>
 
+<!-- icon 사용을 위해 hashmap 사용. 키는 아이콘이름=팀이름. 값은 아이콘 파일명 -->
+<% Map<String, String> icon = new HashMap<>(); %>
+<%  for(int i=0; i<iconList.size(); i++) {
+	icon.put(iconList.get(i).getIconname(), iconList.get(i).getStorename());
+}%>
 
-</script> -->
 
 
 <!-- 사이드바 -->
@@ -248,7 +260,6 @@ table, th{
 	<input type="button" value="검색"/>
 	<!-- <button type="submit" id="btnSearch" class="btn">검색</button> -->
 	</div>
-</form>
 
  
 
@@ -297,9 +308,21 @@ table, th{
 	</div>
  	</td>
  	<td><a href="/board/view?boardno=${i.boardno}">${i.title }</a></td>
-<%--  	<td style="text-overflow:ellipsis; overflow:hidden">${i.content }</td> --%>
  	<td>${i.scheduleno }</td>
+ 	
+ 	
+ 	<!-- 응원하는 팀 icon -->
  	<td>${i.team }</td>
+<!--  	<td>홈팀 이름으로 아이콘 주소 값 가져와서 이미지 불러옴 -->
+<%-- 		<img src="/logo/<%= icon.get(${i.team})%>" --%>
+<!-- 		style="width: 21px; height: 21px;"/> -->
+<%-- 		<%= (team) %> --%>
+<!-- 		<br> -->
+<!--  	</td> -->
+ 	
+ 	
+ 	
+ 	
  	<td><fmt:formatDate value="${i.insertdate }" pattern="yyyy-MM-dd"/></td>
  	<td>${i.hit }</td>
  </tr>

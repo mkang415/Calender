@@ -364,7 +364,7 @@ public class BoardDaoImpl implements BoardDao {
 		
 		String sql = "";
 
-		sql += "SELECT schduleno FROM schedule";
+		sql += "SELECT scheduleno FROM schedule";
 		sql += " WHERE gamedate=?";
 		sql += " And (hometeam=? or awayteam=?)";
 		
@@ -866,4 +866,59 @@ public class BoardDaoImpl implements BoardDao {
 		}
 		return totalCount;
 	}
+
+	
+	//iconlist
+	@Override
+	public List<Icon> iconList() {
+		List<Icon> iconList = new ArrayList();
+		
+		String sql = "";
+		sql += "SELECT iconno, iconname, storename";
+		sql += " FROM icon ORDER BY iconno";
+		
+		try {
+			ps=conn.prepareStatement(sql);
+			
+			rs = ps.executeQuery();
+			
+			while (rs.next()) {
+				Icon icon = new Icon();
+				icon.setIconno(rs.getInt("iconno"));
+				icon.setIconname(rs.getString("iconname"));
+				icon.setStorename(rs.getString("storename"));
+				
+				iconList.add(icon);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			
+				
+				try {
+					if(rs!=null) rs.close();
+					if(ps!=null) ps.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			
+		}
+		return iconList;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

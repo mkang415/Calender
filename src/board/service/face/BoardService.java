@@ -77,6 +77,9 @@ public interface BoardService {
 
 	public Paging getSelectbyScheNo(HttpServletRequest req, int sno);
 
+	
+	//iconlist
+	public List iconList();
 
 
 

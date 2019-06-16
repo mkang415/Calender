@@ -50,4 +50,7 @@ public interface BoardDao {
 	public List selectBoardByScheNo(Paging paging, int sno);
 
 	public int getSelectbyScheNo(int sno);
+	
+	//iconlist
+	public List iconList();
 }
